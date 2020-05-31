@@ -130,3 +130,7 @@ dmypy.json
 src/.cache-danya.scout
 
 src/lyrics.json
+
+output/
+
+src/app with id.py
