@@ -1,3 +1,11 @@
 # Lyrix
 
-Currently only prints the song lyrics to the terminal, and saves them as a JSON. You must re-run the app to get a new lyrics. Next update is to have automatic lyrics printed when song changes!
+Lyrix displays lyrics taken from the Genius API for any song playing on Spotify!
+
+## Improvements
+
+- [x] GUI using Tkinter
+- [ ] Automatically switch lyrics
+- [ ] Dark Mode
+
+![Image of Lyrix Logo](/images/icon.png)
