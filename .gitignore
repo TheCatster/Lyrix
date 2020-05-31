@@ -122,3 +122,11 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+.idea/
+
+.DS_Store
+
+src/.cache-danya.scout
+
+src/lyrics.json
