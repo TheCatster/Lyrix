@@ -68,7 +68,7 @@ def get_lyrics(
         lyrics = {"lyrics": song.lyrics}
         json_object = json.dumps(lyrics, indent=4)
 
-        with open("lyrics.json", "w") as outfile:
+        with open("lyrix/lyrics.json", "w") as outfile:
             outfile.write(json_object)
     except AttributeError:
         print("This song's lyrics cannot be found!")
@@ -77,5 +77,5 @@ def get_lyrics(
             {"lyrics": "No lyrics could be found on Genius for this song."}, indent=4
         )
 
-        with open("lyrics.json", "w") as outfile:
+        with open("lyrix/lyrics.json", "w") as outfile:
             outfile.write(json_object)

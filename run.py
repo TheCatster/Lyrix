@@ -1,0 +1,3 @@
+import lyrix
+
+lyrix.run()
