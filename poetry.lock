@@ -6,22 +6,20 @@ category = "main"
 optional = false
 python-versions = "*"
 
+[package.dependencies]
+soupsieve = {version = ">1.2", markers = "python_version >= \"3.0\""}
+
 [package.extras]
 html5lib = ["html5lib"]
 lxml = ["lxml"]
 
-[package.dependencies]
-[package.dependencies.soupsieve]
-version = ">1.2"
-python = ">=3.0"
-
 [[package]]
 name = "certifi"
-version = "2020.6.20"
+version = "2022.12.7"
 description = "Python package for providing Mozilla's CA Bundle."
 category = "main"
 optional = false
-python-versions = "*"
+python-versions = ">=3.6"
 
 [[package]]
 name = "chardet"
@@ -47,15 +45,15 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.extras]
-checks = ["tox (>=3.2,<4.0)", "doc8", "flake8", "flake8-bugbear", "pygments"]
-dev = ["sphinx (>=3.2,<4.0)", "sphinx-rtd-theme", "pytest (>=6.0,<7.0)", "tox (>=3.2,<4.0)", "doc8", "flake8", "flake8-bugbear", "pygments"]
-docs = ["sphinx (>=3.2,<4.0)", "sphinx-rtd-theme"]
-tests = ["pytest (>=6.0,<7.0)"]
-
 [package.dependencies]
 beautifulsoup4 = ">=4.6.0"
 requests = ">=2.20.0"
+
+[package.extras]
+checks = ["doc8", "flake8", "flake8-bugbear", "pygments", "tox (>=3.2,<4.0)"]
+dev = ["doc8", "flake8", "flake8-bugbear", "pygments", "pytest (>=6.0,<7.0)", "sphinx (>=3.2,<4.0)", "sphinx-rtd-theme", "tox (>=3.2,<4.0)"]
+docs = ["sphinx (>=3.2,<4.0)", "sphinx-rtd-theme"]
+tests = ["pytest (>=6.0,<7.0)"]
 
 [[package]]
 name = "requests"
@@ -65,15 +63,15 @@ category = "main"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
 
-[package.extras]
-security = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)"]
-socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7)", "win-inet-pton"]
-
 [package.dependencies]
 certifi = ">=2017.4.17"
 chardet = ">=3.0.2,<4"
 idna = ">=2.5,<3"
 urllib3 = ">=1.21.1,<1.25.0 || >1.25.0,<1.25.1 || >1.25.1,<1.26"
+
+[package.extras]
+security = ["cryptography (>=1.3.4)", "pyOpenSSL (>=0.14)"]
+socks = ["PySocks (>=1.5.6,!=1.5.7)", "win-inet-pton"]
 
 [[package]]
 name = "six"
@@ -90,7 +88,6 @@ description = "A modern CSS selector implementation for Beautiful Soup."
 category = "main"
 optional = false
 python-versions = ">=3.5"
-marker = "python_version >= \"3.0\""
 
 [[package]]
 name = "spotipy"
@@ -100,13 +97,13 @@ category = "main"
 optional = false
 python-versions = "*"
 
-[package.extras]
-doc = ["Sphinx (>=1.5.2)"]
-test = ["mock (2.0.0)"]
-
 [package.dependencies]
 requests = ">=2.20.0"
 six = ">=1.10.0"
+
+[package.extras]
+doc = ["Sphinx (>=1.5.2)"]
+test = ["mock (==2.0.0)"]
 
 [[package]]
 name = "urllib3"
@@ -118,13 +115,13 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4"
 
 [package.extras]
 brotli = ["brotlipy (>=0.6.0)"]
-secure = ["pyOpenSSL (>=0.14)", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "certifi", "ipaddress"]
-socks = ["PySocks (>=1.5.6,<1.5.7 || >1.5.7,<2.0)"]
+secure = ["certifi", "cryptography (>=1.3.4)", "idna (>=2.0.0)", "ipaddress", "pyOpenSSL (>=0.14)"]
+socks = ["PySocks (>=1.5.6,!=1.5.7,<2.0)"]
 
 [metadata]
-lock-version = "1.0"
+lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "9ddf6067a8d114658444631a2c5dc48fdf3e5ce6e409d01856573a0f404a872b"
+content-hash = "3403516d9b1c7ea2e2449043f44ce9cd6fb80e5dab425b93ec2ae9402fa2ff39"
 
 [metadata.files]
 beautifulsoup4 = [
@@ -133,8 +130,8 @@ beautifulsoup4 = [
     {file = "beautifulsoup4-4.9.3.tar.gz", hash = "sha256:84729e322ad1d5b4d25f805bfa05b902dd96450f43842c4e99067d5e1369eb25"},
 ]
 certifi = [
-    {file = "certifi-2020.6.20-py2.py3-none-any.whl", hash = "sha256:8fc0819f1f30ba15bdb34cceffb9ef04d99f420f68eb75d901e9560b8749fc41"},
-    {file = "certifi-2020.6.20.tar.gz", hash = "sha256:5930595817496dd21bb8dc35dad090f1c2cd0adfaf21204bf6732ca5d8ee34d3"},
+    {file = "certifi-2022.12.7-py3-none-any.whl", hash = "sha256:4ad3232f5e926d6718ec31cfc1fcadfde020920e278684144551c91769c7bc18"},
+    {file = "certifi-2022.12.7.tar.gz", hash = "sha256:35824b4c3a97115964b408844d64aa14db1cc518f6562e8d7261699d1350a9e3"},
 ]
 chardet = [
     {file = "chardet-3.0.4-py2.py3-none-any.whl", hash = "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"},

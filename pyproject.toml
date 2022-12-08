@@ -8,7 +8,7 @@ license = "GPL-3.0-or-later"
 [tool.poetry.dependencies]
 python = "^3.8"
 beautifulsoup4 = "^4.9.3"
-certifi = "^2020.6.20"
+certifi = ">=2020.6.20,<2023.0.0"
 chardet = "^3.0.4"
 idna = "^2.10"
 lyricsgenius = "^2.0.2"
